@@ -131,6 +131,15 @@ const GlassCinema: React.FC<GlassCinemaProps> = ({ onNavigate }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
 
+  // FIX: Reset exiting state when page is restored from bfcache (Back button)
+  useEffect(() => {
+    const handlePageShow = (event: PageTransitionEvent) => {
+        setIsExiting(false);
+    };
+    window.addEventListener('pageshow', handlePageShow);
+    return () => window.removeEventListener('pageshow', handlePageShow);
+  }, []);
+
   // Dynamic Data based on active mode (Desktop)
   const currentData = activeMode === 'facilities' ? CINEMA_CARDS_DATA : FEATURED_THERAPIES_DATA;
   const activeLocation = currentData[activeIndex] || currentData[0];
