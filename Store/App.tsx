@@ -73,6 +73,19 @@ const StoreApp: React.FC<StoreAppProps> = ({ onBack }) => {
                     Profesjonalne wsparcie <br />
                     <span className="text-[#8d6e63] italic">dla Twojego zdrowia</span>
                 </h1>
+
+                {/* NFZ Badge Integration */}
+                <div className="flex items-center justify-center gap-3 mb-10">
+                    <img 
+                        src="https://pbyfajvltehsuugpayej.supabase.co/storage/v1/object/public/GalicaMedWWW/website_elements/graphics/logos/nfz.png" 
+                        alt="NFZ" 
+                        className="h-8 w-auto object-contain drop-shadow-sm" 
+                    />
+                    <span className="text-sm md:text-base font-bold text-[#003e7e] tracking-widest uppercase border-b-2 border-[#003e7e]/20 pb-1">
+                        Refundacja NFZ
+                    </span>
+                </div>
+
                 <p className="text-lg md:text-xl text-stone-600 font-light leading-relaxed max-w-2xl mx-auto mb-10">
                     Szeroki wybór sprzętu, realizacja wniosków NFZ oraz pomoc w uzyskaniu dofinansowania PFRON. Jesteśmy tu, by pomóc.
                 </p>
