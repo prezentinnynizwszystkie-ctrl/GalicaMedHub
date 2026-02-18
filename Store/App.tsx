@@ -65,30 +65,25 @@ const StoreApp: React.FC<StoreAppProps> = ({ onBack }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
+                className="flex flex-col items-center justify-center"
             >
-                <span className="inline-block px-4 py-1.5 mb-6 border border-[#5d4037]/20 rounded-full text-[10px] uppercase tracking-[0.3em] font-bold text-[#5d4037] bg-white/50 backdrop-blur-sm">
-                    Sprzęt Medyczny & Rehabilitacyjny
-                </span>
-                <h1 className="text-4xl md:text-7xl font-serif text-[#3e2723] mb-6 leading-tight">
-                    Profesjonalne wsparcie <br />
-                    <span className="text-[#8d6e63] italic">dla Twojego zdrowia</span>
+                {/* 1. Large NFZ Logo */}
+                <img 
+                    src="https://pbyfajvltehsuugpayej.supabase.co/storage/v1/object/public/GalicaMedWWW/website_elements/graphics/logos/nfz.png" 
+                    alt="NFZ" 
+                    className="h-20 md:h-32 w-auto object-contain drop-shadow-md mb-8" 
+                />
+
+                {/* 2. Refundacja NFZ Text */}
+                <h2 className="text-xl md:text-2xl font-bold text-[#003e7e] tracking-[0.2em] uppercase mb-4 border-b-2 border-[#003e7e]/20 pb-2">
+                    Refundacja NFZ
+                </h2>
+
+                {/* 3. Sklep Medyczny Text */}
+                <h1 className="text-4xl md:text-7xl font-serif text-[#3e2723] leading-tight">
+                    Sklep Medyczny
                 </h1>
 
-                {/* NFZ Badge Integration */}
-                <div className="flex items-center justify-center gap-3 mb-10">
-                    <img 
-                        src="https://pbyfajvltehsuugpayej.supabase.co/storage/v1/object/public/GalicaMedWWW/website_elements/graphics/logos/nfz.png" 
-                        alt="NFZ" 
-                        className="h-8 w-auto object-contain drop-shadow-sm" 
-                    />
-                    <span className="text-sm md:text-base font-bold text-[#003e7e] tracking-widest uppercase border-b-2 border-[#003e7e]/20 pb-1">
-                        Refundacja NFZ
-                    </span>
-                </div>
-
-                <p className="text-lg md:text-xl text-stone-600 font-light leading-relaxed max-w-2xl mx-auto mb-10">
-                    Szeroki wybór sprzętu, realizacja wniosków NFZ oraz pomoc w uzyskaniu dofinansowania PFRON. Jesteśmy tu, by pomóc.
-                </p>
             </motion.div>
         </div>
       </header>
