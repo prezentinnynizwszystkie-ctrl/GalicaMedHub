@@ -11,7 +11,7 @@ type AppView = 'gateway' | 'store';
 
 const EXTERNAL_LINKS: Record<string, string> = {
   poronin: 'https://www.galicamed.pl',
-  maniowy: 'https://www.galicamedmaniowy.pl',
+  maniowy: 'https://galicamedmaniowy-227247202765.us-west1.run.app',
   beauty: 'https://www.galicamedbeauty.pl',
   puls: 'https://www.poradniapuls.pl',
   infuzje: 'https://www.terapieinfuzyjne.pl',
